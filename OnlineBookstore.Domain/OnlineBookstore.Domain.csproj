@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Order\Aggregates\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\OnlineBookstore.Common\OnlineBookstore.Common.csproj" />
   </ItemGroup>
 

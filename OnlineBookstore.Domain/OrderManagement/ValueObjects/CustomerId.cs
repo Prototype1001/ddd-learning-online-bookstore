@@ -5,20 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineBookstore.Domain.Order.ValueObjects
+namespace OnlineBookstore.Domain.OrderManagement.ValueObjects
 {
-    public class BookId : ValueObject
+    public class CustomerId : ValueObject
     {
-        public int Value { get; private set; }
+        public readonly int Value;
 
-        public BookId(int id)
+        public CustomerId(int id)
         {
             Value = id;
         }
 
         protected override IEnumerable<object> GetEqualityComponents()
         {
-            throw new NotImplementedException();
+            return [Value];
         }
     }
 }

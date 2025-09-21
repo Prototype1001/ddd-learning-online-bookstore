@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineBookstore.Domain.Order.Enums
+namespace OnlineBookstore.Domain.OrderManagement.Enums
 {
     public enum Currency : byte
     {
