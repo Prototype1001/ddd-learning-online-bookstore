@@ -9,6 +9,7 @@ namespace OnlineBookstore.Domain.OrderManagement.Enums
     public enum OrderStatus : byte
     {
         Pending,
+        Confirmed,
         Processing,
         Shipped,
         Delivered,

@@ -7,18 +7,11 @@ using System.Threading.Tasks;
 
 namespace OnlineBookstore.Domain.OrderManagement.ValueObjects
 {
-    public class OrderId : ValueObject
+    public class OrderId : EntityId<Guid>
     {
-        public readonly int Value;
-
-        public OrderId(int id)
+        public OrderId(Guid value)
+            : base(value)
         {
-            Value = id;
-        }
-
-        protected override IEnumerable<object> GetEqualityComponents()
-        {
-            return [Value];
         }
     }
 }

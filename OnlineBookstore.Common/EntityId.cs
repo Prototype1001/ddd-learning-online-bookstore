@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineBookstore.Domain.OrderManagement.ValueObjects
+namespace OnlineBookstore.Common
 {
-    public class OrderItemId : ValueObject
+    public class EntityId<T> : ValueObject
     {
-        public readonly int Value;
+        public readonly T Value;
 
-        public OrderItemId(int id)
+        public EntityId(T id)
         {
             Value = id;
         }
@@ -20,5 +20,11 @@ namespace OnlineBookstore.Domain.OrderManagement.ValueObjects
         {
             return [Value];
         }
+
+        public bool HasValue()
+        {
+            return Value != null && !Value.Equals(default(T));
+        }
+
     }
 }
